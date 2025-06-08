@@ -1,6 +1,3 @@
-Thanks for downloading this template!
+Thanks for choosing Aeon Coda!
 
-Template Name: Scout
-Template URL: https://bootstrapmade.com/scout-bootstrap-multipurpose-template/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+Author: aeon.co.tz/ceo
