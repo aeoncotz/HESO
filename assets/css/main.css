@@ -3306,8 +3306,12 @@ video {
 
 .paynow a {
   padding: 5px 12px;
-  background: #ccc;
+  border: 1px solid #ccc;
   border-radius: 12px;
+}
+
+.paynow a:hover {
+  background: #ccc;
 }
 
 .button-xc {
