@@ -3276,3 +3276,9 @@ video {
 .play-btn:hover {
   background: rgba(0, 0, 0, 0.7);
 }
+
+.step-content ul span {
+  font-weight: 600;
+  padding-top: 20px;
+  font-size: 1.1rem;
+}
