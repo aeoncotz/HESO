@@ -68,16 +68,177 @@
         <!-- Page Title -->
         <div class="page-title light-background">
             <div class="container d-lg-flex justify-content-between align-items-center">
-                <h1 class="mb-2 mb-lg-0">About Us</h1>
+                <h1 class="mb-2 mb-lg-0">Apply Online</h1>
                 <nav class="breadcrumbs">
                     <ol>
                         <li><a href="index.html">Home</a></li>
-                        <li class="current">About Us</li>
+                        <li class="current">Apply</li>
                     </ol>
                 </nav>
             </div>
         </div><!-- End Page Title -->
 
+
+        <section id="contact" class="contact section">
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Apply Online</h2>
+                <em>
+                    Join our mission to improve health and protect the environment in Tanzania by applying to be part of
+                    the Health and
+                    Environment Solutions Organization (HESO). Whether you're interested in volunteering, pursuing an
+                    internship, or seeking
+                    employment, we're excited to connect with passionate individuals who are ready to make a difference.
+                </em>
+            </div><!-- End Section Title -->
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="contact-content">
+                    <div class="contact-cards-container" data-aos="fade-up" data-aos-delay="300">
+                        <div class="contact-card">
+                            <div class="icon-box">
+                                <i class="bi bi-geo-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>Arusha, Tanzania, United Republic</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="icon-box">
+                                <i class="bi bi-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>info@heso.or.tz</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="icon-box">
+                                <i class="bi bi-telephone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Call</h4>
+                                <p>+255 (XX) XXX-XXXX</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="icon-box">
+                                <i class="bi bi-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Open Hours</h4>
+                                <p>Monday - Friday: 8AM - 6PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container" data-aos="fade-up" data-aos-delay="400">
+                        <h3>Application Opportunities:</h3>
+                        <em>
+                            We welcome applications for the following roles
+                        </em>
+                        <table class="table table-bordered">
+                            <thead class="table-light">
+                                <tr>
+                                    <th style="width: 40%;">Opportunity</th>
+                                    <th style="width: 60%;">Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Volunteering</td>
+                                    <td>
+                                        Contribute your time and skills to support health and environmental projects at
+                                        local and national levels. Both short-
+                                        and long-term placements are available.
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Internship</td>
+                                    <td>
+                                        Gain hands-on experience in areas such as environmental research, public health
+                                        education, climate action, or WASH
+                                        programs. Ideal for university students or recent graduates.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Staff Recruitment</td>
+                                    <td>Explore current job openings and apply to become part of our dynamic and
+                                        purpose-driven team.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="contact-form-container" data-aos="fade-up" data-aos-delay="400">
+                        <h3>Online Application Form</h3>
+                        <em>
+                            To apply, please fill out our secure online form. You will be asked to provide the following
+                            information
+                        </em>
+
+                        <form action="forms/contact.php" method="post" class="php-email-form">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <input type="text" name="name" class="form-control" id="name"
+                                        placeholder="Your Name" required="">
+                                </div>
+                                <div class="col-md-6 form-group mt-3 mt-md-0">
+                                    <input type="email" class="form-control" name="email" id="email"
+                                        placeholder="Your Email" required="">
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <input type="tel" class="form-control" name="phone" id="phone"
+                                    placeholder="Phone Number" required="">
+                            </div>
+                            <div class="form-group mt-3">
+                                <select id="interest" name="interest" class="form-select" required>
+                                    <option value="">Select Opportunity</option>
+                                    <option value="volunteering">Volunteering</option>
+                                    <option value="internship">Internship</option>
+                                    <option value="staff">Staff Recruitment</option>
+                                </select>
+                            </div>
+                            <div class="form-group mt-3">
+                                <label for="cv" class="form-label fw-semibold">Upload Your CV <span
+                                        class="text-muted">(Max 5MB)</span>:</label>
+                                <input type="file" class="form-control border-primary shadow-sm" id="cv" name="cv"
+                                    accept=".pdf,.doc,.docx" required>
+                                <div class="form-text text-secondary">
+                                    Accepted formats: <strong>PDF, DOC, DOCX</strong>. File must be ≤ 5MB. </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <textarea class="form-control" name="message" rows="5"
+                                    placeholder="Tell us why you want to join HESO and what you hope to contribute"
+                                    required=""></textarea>
+                            </div>
+
+                            <div class="my-3">
+                                <div class="loading">Loading</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">Your message has been sent. Thank you!</div>
+                            </div>
+
+                            <div class="form-submit">
+                                <button type="submit">Submit</button>
+                                <div class="social-links">
+                                    <a href="#"><i class="bi bi-twitter"></i></a>
+                                    <a href="#"><i class="bi bi-facebook"></i></a>
+                                    <a href="#"><i class="bi bi-instagram"></i></a>
+                                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section><!-- /Contact Section -->
 
     </main>
 

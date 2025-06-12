@@ -198,3 +198,11 @@ button.addEventListener("click", () => {
     icon.className = "bi bi-play-fill";
   }
 });
+
+document.getElementById("cv").addEventListener("change", function () {
+  const file = this.files[0];
+  if (file && file.size > 5 * 1024 * 1024) {
+    alert("File size must be 5MB or less.");
+    this.value = ""; // Clear the input
+  }
+});
