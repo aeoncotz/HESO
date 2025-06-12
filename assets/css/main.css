@@ -3282,3 +3282,57 @@ video {
   padding-top: 20px;
   font-size: 1.1rem;
 }
+
+.involved-bxc {
+  margin: 10px 0;
+}
+
+.spexc span {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.paynow-xc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.paynow {
+  width: 100%;
+  padding: 5px 0;
+}
+
+.paynow a {
+  padding: 5px 12px;
+  background: #ccc;
+  border-radius: 12px;
+}
+
+.button-xc {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding: 8px;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.button-xc .btn-dxc {
+  /* border: 1px red solid; */
+  padding: 12px;
+  margin-bottom: 8px;
+}
+
+.button-xc .btn-dxc a {
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.button-xc .btn-dxc a:hover {
+  background: #ccc;
+}
