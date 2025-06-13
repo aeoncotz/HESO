@@ -187,7 +187,7 @@ a:hover {
   }
 
   .header .navmenu {
-    order: 3;
+    order: 4;
   }
 }
 
@@ -430,7 +430,7 @@ a:hover {
   }
 
   .mobile-nav-active .mobile-nav-toggle {
-    color: #fff;
+    color: #882929;
     position: absolute;
     font-size: 32px;
     top: 15px;
@@ -3383,4 +3383,15 @@ video {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+}
+
+#themeTogglebtn {
+  position: fixed;
+  top: 8%;
+  right: 15px;
+  z-index: 100000;
+  outline: none;
+  border: none;
+  background: var(--background-color);
+  color: var(--accent-color);
 }

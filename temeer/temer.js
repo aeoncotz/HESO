@@ -1,19 +1,23 @@
 const htmlEl = document.documentElement;
 const toggleBtn = document.getElementById("themeToggle");
 
-// Load saved theme from localStorage
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme === "dark") {
   htmlEl.classList.add("dark-theme");
-  toggleBtn.textContent = "Light Mode";
+  toggleBtn.classList.remove("bi-moon-fill");
+  toggleBtn.classList.add("bi-sun-fill");
 } else {
   htmlEl.classList.remove("dark-theme");
-  toggleBtn.textContent = "Dark Mode";
+  toggleBtn.classList.remove("bi-sun-fill");
+  toggleBtn.classList.add("bi-moon-fill");
 }
 
-// Toggle theme and save
 toggleBtn.addEventListener("click", () => {
   const isDark = htmlEl.classList.toggle("dark-theme");
   localStorage.setItem("theme", isDark ? "dark" : "light");
-  toggleBtn.textContent = isDark ? "Light Mode" : "Dark Mode";
 });
+
+function updateIcon(isDark) {
+  icon.classList.remove("bi-moon-fill", "bi-sun-fill");
+  icon.classList.add(isDark ? "bi-sun-fill" : "bi-moon-fill");
+}
