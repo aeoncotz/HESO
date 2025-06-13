@@ -3344,3 +3344,38 @@ video {
 .pad-xc {
   padding: 10px;
 }
+
+.swiper-slide-xc {
+  /* border: 1px solid red; */
+  display: flex;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.member-info-xc {
+  border: 1px rebeccapurple solid;
+  display: flex;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 8px;
+}
+
+.member-info-xc h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.member-info-xc span {
+  font-size: 0.9rem;
+}
+
+.member-info-xc .member-social {
+  width: 100%;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
