@@ -1,17 +1,6 @@
-/**
- * Template Name: Scout
- * Template URL: https://bootstrapmade.com/scout-bootstrap-multipurpose-template/
- * Updated: May 05 2025 with Bootstrap v5.3.5
- * Author: BootstrapMade.com
- * License: https://bootstrapmade.com/license/
- */
-
 (function () {
   "use strict";
 
-  /**
-   * Apply .scrolled class to the body as the page is scrolled down
-   */
   function toggleScrolled() {
     const selectBody = document.querySelector("body");
     const selectHeader = document.querySelector("#header");

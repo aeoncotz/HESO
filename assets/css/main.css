@@ -7,49 +7,67 @@
   --nav-font: "Montserrat", sans-serif;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root {
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #52413a; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #31221c; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #f85d23; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
-}
-
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
-:root {
-  --nav-color: #52413a; /* The default color of the main navmenu links */
-  --nav-hover-color: #f85d23; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #52413a; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #f85d23; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
-}
-
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
-
-.light-background {
-  --background-color: #f8f5f4;
+  --background-color: #ffffff;
+  --default-color: #52413a;
+  --heading-color: #31221c;
+  --accent-color: #f85d23;
   --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+  --footer-color: #f0e9e6;
+  --card-color: #e4dddd;
+
+  /* Nav */
+  --nav-color: #52413a;
+  --nav-hover-color: #f85d23;
+  --nav-mobile-background-color: #ffffff;
+  --nav-dropdown-background-color: #ffffff;
+  --nav-dropdown-color: #52413a;
+  --nav-dropdown-hover-color: #f85d23;
 }
 
-.dark-background {
+/* Dark Theme Override */
+html.dark-theme {
   --background-color: #060606;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #343333;
   --contrast-color: #ffffff;
+  --footer-color: #1a1a1a;
+  --card-color: #140f0f;
+
+  --nav-color: #ffffff;
+  --nav-hover-color: #f85d23;
+  --nav-mobile-background-color: #343333;
+  --nav-dropdown-background-color: #343333;
+  --nav-dropdown-color: #ffffff;
+  --nav-dropdown-hover-color: #f85d23;
 }
 
-/* Smooth scroll */
+/* Apply CSS variables globally */
+body {
+  background-color: var(--background-color);
+  color: var(--default-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+}
+
+a,
+.btn {
+  color: var(--accent-color);
+}
+
 :root {
   scroll-behavior: smooth;
 }
 
-/*--------------------------------------------------------------
-# General Styling & Shared Classes
---------------------------------------------------------------*/
 body {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -66,20 +84,7 @@ a:hover {
   color: color-mix(in srgb, var(--accent-color), transparent 25%);
   text-decoration: none;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--heading-color);
-  font-family: var(--heading-font);
-}
-
-/* PHP Email Form Messages
-------------------------------*/
-.php-email-form .error-message {
+------------------------------*/ .php-email-form .error-message {
   display: none;
   background: #df1529;
   color: #ffffff;
@@ -129,13 +134,10 @@ h6 {
   }
 }
 
-/*--------------------------------------------------------------
-# Global Header
---------------------------------------------------------------*/
 .header {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 15px 0;
+  padding: 8px 0;
   transition: all 0.5s;
   z-index: 997;
 }
@@ -189,16 +191,10 @@ h6 {
   }
 }
 
-/* Global Header on Scroll
-------------------------------*/
 .scrolled .header {
-  --background-color: rgba(244, 239, 237, 0.95);
+  background: var(--background-color);
 }
 
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
-/* Desktop Navigation */
 @media (min-width: 1200px) {
   .navmenu {
     padding: 0;
@@ -331,7 +327,6 @@ h6 {
   }
 }
 
-/* Mobile Navigation */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
@@ -457,12 +452,9 @@ h6 {
   }
 }
 
-/*--------------------------------------------------------------
-# Global Footer
---------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: var(--footer-color);
   font-size: 14px;
   position: relative;
 }
@@ -609,22 +601,16 @@ h6 {
   bottom: 15px;
 }
 
-/*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
 }
 
-/*--------------------------------------------------------------
-# Global Page Titles & Breadcrumbs
---------------------------------------------------------------*/
 .page-title {
   color: var(--default-color);
-  background-color: var(--background-color);
-  padding: 25px 0;
+  background-color: var(--footer-color);
+  padding: 20px 0;
   position: relative;
 }
 
@@ -915,7 +901,8 @@ section,
   margin-right: auto;
 }
 
-.about .feature-box {
+.about .feature-box,
+.feature-xc {
   background: var(--surface-color);
   border-radius: 12px;
   padding: 2.5rem 1.5rem;
@@ -2390,7 +2377,8 @@ section,
   color: var(--contrast-color);
 }
 
-.team .member-card {
+.team .member-card,
+.card-xc {
   display: flex;
   flex-direction: column;
   background-color: var(--surface-color);
@@ -2409,7 +2397,8 @@ section,
   opacity: 0.7;
 }
 
-.team .member-card .member-image {
+.team .member-card .member-image,
+.card-xc-img {
   position: relative;
   overflow: hidden;
   height: 240px;
@@ -2627,6 +2616,22 @@ section,
   color: var(--heading-color);
   position: relative;
   padding-left: 15px;
+}
+
+.team-member {
+  background: var(--card-color);
+  color: var(--default-color);
+}
+
+.custom-table th {
+  border-top: 1px var(--accent-color) solid;
+  border-bottom: 1px var(--accent-color) solid;
+  color: var(--default-color);
+  padding: 5px 0;
+}
+
+.custom-table td {
+  border-bottom: 1px var(--accent-color) solid;
 }
 
 .contact .contact-form-container h3:before {
