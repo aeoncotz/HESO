@@ -3340,3 +3340,7 @@ video {
 .button-xc .btn-dxc a:hover {
   background: #ccc;
 }
+
+.pad-xc {
+  padding: 10px;
+}
