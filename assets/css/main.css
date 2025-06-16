@@ -11,7 +11,7 @@
   --background-color: #ffffff;
   --default-color: #52413a;
   --heading-color: #31221c;
-  --accent-color: #f85d23;
+  --accent-color: green;
   --surface-color: #ffffff;
   --contrast-color: #ffffff;
   --footer-color: #f0e9e6;
@@ -19,11 +19,11 @@
 
   /* Nav */
   --nav-color: #52413a;
-  --nav-hover-color: #f85d23;
+  --nav-hover-color: green;
   --nav-mobile-background-color: #ffffff;
   --nav-dropdown-background-color: #ffffff;
   --nav-dropdown-color: #52413a;
-  --nav-dropdown-hover-color: #f85d23;
+  --nav-dropdown-hover-color: green;
 }
 
 /* Dark Theme Override */
@@ -37,11 +37,11 @@ html.dark-theme {
   --card-color: #140f0f;
 
   --nav-color: #ffffff;
-  --nav-hover-color: #f85d23;
+  --nav-hover-color: green;
   --nav-mobile-background-color: #343333;
   --nav-dropdown-background-color: #343333;
   --nav-dropdown-color: #ffffff;
-  --nav-dropdown-hover-color: #f85d23;
+  --nav-dropdown-hover-color: green;
 }
 
 /* Apply CSS variables globally */
