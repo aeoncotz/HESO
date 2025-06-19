@@ -3387,7 +3387,7 @@ video {
 
 #themeTogglebtn {
   position: fixed;
-  top: 8%;
+  top: 10%;
   right: 15px;
   z-index: 100;
   outline: none;
