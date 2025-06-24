@@ -3437,12 +3437,12 @@ video {
 
 @media (max-width: 768px) {
   .gallery-item img {
-    height: 180px;
+    height: 200px;
   }
 }
 
 @media (max-width: 480px) {
   .gallery-item img {
-    height: 180px;
+    height: 200px;
   }
 }
