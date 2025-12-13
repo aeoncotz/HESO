@@ -3402,6 +3402,17 @@ video {
   color: var(--accent-color);
 }
 
+#languageToggle {
+  position: fixed;
+  top: calc(15% + 10px);
+  right: 15px;
+  z-index: 100;
+  outline: none;
+  border: none;
+  background: var(--background-color);
+  color: var(--accent-color);
+}
+
 /* gallery */
 .gallery {
   display: grid;
