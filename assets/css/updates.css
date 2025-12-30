@@ -1,0 +1,186 @@
+/* ==========================================================================
+   CSS Variables - Theme Support
+   ========================================================================== */
+:root {
+  /* Light theme (default) */ 
+  --background-color: linear-gradient(135deg, #e0f2f1 0%, #f0fdfa 100%);
+  --surface-color:    #ffffff;
+  --card-color:       #f8f9fa;          /* cleaner light card */
+  --text-color:       #2d2d2d;
+  --heading-color:    #1a1a1a;
+  --default-color:    #52413a;
+  --muted:            #6b7280;
+  --accent:           #00bcd4;           /* teal-cyan */
+  --accent-dark:      #0097a7;
+  --primary:          #0d9488;           /* teal-700ish */
+  --primary-dark:     #0f766e;
+  --footer-color:     #f0e9e6;
+  --shadow-color:     rgba(0, 0, 0, 0.08);
+  --shadow-hover:     rgba(0, 109, 119, 0.18);
+}
+
+[data-theme="dark"] {
+  --background-color: #343333;
+  --surface-color:    #1a1a1a;
+  --card-color:       #1e1e1e;
+  --text-color:       #e0e0e0;
+  --heading-color:    #f0f0f0;
+  --default-color:    #d4c3bd;
+  --muted:            #9ca3af;
+  --shadow-color:     rgba(0, 0, 0, 0.5);
+  --shadow-hover:     rgba(0, 0, 0, 0.65);
+  /* accent stays the same unless you want a different one in dark mode */
+}
+
+/* ==========================================================================
+   Base / Utility Classes
+   ========================================================================== */
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+.story-hero {
+  background: var(--background-color);
+  padding: 5rem 0 4rem;
+  margin-bottom: 3rem;
+  border-radius: 0 0 32px 32px;
+}
+
+[data-theme="dark"] .story-hero {
+  background: linear-gradient(135deg, #0f766e 0%, #164e63 100%);
+  color: #f0fdfa;
+}
+
+/* ==========================================================================
+   Story Card
+   ========================================================================== */
+.story-card {
+  background: var(--card-color);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.12);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 32px var(--shadow-color);
+  position: relative;
+}
+
+[data-theme="dark"] .story-card {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.story-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 24px 48px var(--shadow-hover);
+}
+
+.card-image {
+  width: 100%;
+  object-fit: cover;
+  border-bottom: 4px solid var(--accent);
+}
+
+.date-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  box-shadow: 0 6px 20px rgba(0, 109, 119, 0.35);
+  z-index: 10;
+}
+
+.card-body {
+  padding: 2rem 1.75rem 1.75rem;
+}
+
+.card-title {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+  color: var(--heading-color);
+}
+
+.outcome {
+  font-weight: 500;
+  color: var(--accent);
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+}
+
+.meta {
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin-top: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.meta span {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.btn-primary-custom {
+  background: var(--primary);
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(13, 148, 136, 0.3);
+}
+
+.btn.join {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  background: transparent;
+  padding: 0.7rem 1.8rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn.join:hover {
+  background: var(--accent);
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   Responsive Adjustments
+   ========================================================================== */
+@media (max-width: 992px) {
+  .story-hero {
+    padding: 4rem 0 3rem;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .date-badge {
+    right: 16px;
+    padding: 0.45rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .card-image {
+    height: 180px;          /* optional: prevent collapse on mobile */
+  }
+}
